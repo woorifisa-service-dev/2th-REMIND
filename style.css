@@ -53,8 +53,46 @@ body{
 }
 
 .main{
-    background-color: palegoldenrod;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    height: 100%;
+    width:88%;
+}
+
+.card-container__popular{
+    height: 50%;
+}
+
+.card-list{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.poster{
+    width: 200px;
+    height: 300px;
+    background-image: url('https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_320.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.poster-title{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card-container__comingsoon{
+    background-color: darkorange;
+    height: 50%;
 }
 
 .container-rt{
