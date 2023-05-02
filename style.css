@@ -1,0 +1,64 @@
+@import "./reset.css";
+
+body{
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container-lt{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo img{
+    height: 100%;
+}
+
+.search{
+    width: 60%;
+    border-radius: 15px;
+    border: 1px solid #d1cdcd;
+    margin: 5px 0px;
+    color:rgb(131, 129, 129);
+    padding-left: 20px;
+}
+
+.btn-darkmode{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-darkmode img {
+    height: 100%;
+}
+
+.main{
+    background-color: palegoldenrod;
+    height: 100%;
+}
+
+.container-rt{
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+}
