@@ -50,6 +50,13 @@ export const movieApi = {
 
         // 배경 이미지 html 설계 오류 - 수정 필요
         // <div class="rt-poster-container" style="background-image: url(${backBgPath})"></div>
+        function contentlimit(content){
+          if(content.length>90){
+            return content = content.substr(0,90) + '...';
+          } else{
+            return content
+          }
+        }
         const template = `<div class="rt-poster-container">
         <div class="rt-poster" style="background-image: url(${posterBgPath})"></div>
         <div class="rt-poster-detail">
@@ -58,7 +65,7 @@ export const movieApi = {
           </div>
           <div class="rt-poster-detail__description">
             <p>
-             ${content}
+             ${contentlimit(content)}
             </p>
           </div>
           <div class="rt-poster-detail-plus">
