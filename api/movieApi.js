@@ -12,13 +12,17 @@ export const movieApi = {
     
         const createList = movies.slice(0,3).map((movie) => {
             const imageUrl = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
-            return `<li data-movie-id="${movie.id}">
+            return `<li class="event-li" data-id="${movie.id}">
                  <div class="poster" style="background-image: url(${imageUrl});"></div>
-                 <h3 class="poster-title">${movie.title}</h3>
+                 <h3 class="poster-title dark:text-white">${movie.title}</h3>
                 </li>`;
         }); 
     
-        document.querySelectorAll('.card-list')[position].innerHTML = createList;    
+        document.querySelectorAll('.card-list')[position].innerHTML = createList;
+        
+        const post_btn = document.querySelector(".event-li");
+        post_btn.addEventListener('click',(event).off('click')=>{
+            console.log(event.target.parentNode.dataset.id);
+        })
     }
 };
-
