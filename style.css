@@ -1,95 +1,160 @@
 @import "./reset.css";
 
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.container-lt{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.container-lt {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.header{
-    height: 50px;
-    display: flex;
-    border-bottom: 2px solid #eee;
-    margin-bottom: 15px;
+.header {
+  height: 50px;
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 15px;
 }
 
-.div-lt{
-    width: 10%;    
+.div-lt {
+  width: 10%;
 }
 
-.logo{
-    width: 80%;
-    font-size: 25px;
-    text-align: center;
-    padding-top: 8px;
-    font-weight: 700;
-    letter-spacing: 3px;
+.logo {
+  width: 80%;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 8px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
-.main{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card-container{
-    height: 100%;
-    width:88%;
+.card-container {
+  height: 100%;
+  width: 88%;
 }
 
-.card-container__popular{
-    height: 50%;
+.card-container__popular {
+  height: 50%;
 }
 
 .card-title {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-.card-list{
-display: flex;
-justify-content: space-around;
-align-items: center;
+.card-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.poster{
-    width: 200px;
-    height: 300px;
-    background-image: url('https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_320.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 50%;
+.poster {
+  width: 200px;
+  height: 300px;
+  background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_320.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 
-.poster-title{
-    font-size: 18px;
-    text-align: center;
-    margin-top: 5px;
+.poster-title {
+  font-size: 18px;
+  text-align: center;
 }
 
-.card-container__comingsoon{
-    height: 50%;
+.card-container__comingsoon {
+  height: 50%;
 }
 
-.container-rt{
-    background-color: beige;
-    width: 50%;
-    height: 100%;
+.container-rt {
+  background-color: gray;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rt-poster-container {
+  height: 700px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 15px;
+}
+.rt-poster {
+  width: 300px;
+  height: 500px;
+  background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_320.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  margin-bottom: -35px;
+}
+.rt-poster-detail {
+  width: 300px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+.rt-poster-detail__title {
+  width: 300px;
+  height: 20%;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 40px;
+  text-align: center;
+}
+.rt-poster-detail__description {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 30px;
+  word-break: break-all;
+}
+.rt-poster-detail-plus {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 30px;
+  display: flex;
+}
+.rt-poster-detail-plus__star {
+  width: 60%;
+  height: 100%;
+  font-size: 22px;
+}
+.rt-poster-detail-plus__distribution {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 700;
+  width: 40%;
+  height: 100%;
+}
+.fa-solid fa-star {
 }
