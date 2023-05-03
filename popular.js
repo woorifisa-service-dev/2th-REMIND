@@ -17,7 +17,7 @@ const getPopular = async () => {
             </li>`;
     });
 
-    document.querySelector('.card-list').innerHTML = createList;    
+    document.querySelectorAll('.card-list')[0].innerHTML = createList;    
 }
 
 getPopular();
