@@ -1,9 +1,9 @@
 const API_KEY = '354af52aee70782be0a6e4c9d4057d64';
 const BASE_URL = "https://api.themoviedb.org/3";
 
-let movieData = [];
-
 const getPopular = async () => {
+    let movieData = [];
+    
     await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=ko`)
         .then((res) => res.json())
         .then((data) => movieData = data.results)
