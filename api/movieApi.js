@@ -21,7 +21,7 @@ export const movieApi = {
         document.querySelectorAll('.card-list')[position].innerHTML = createList;
         
         const post_btn = document.querySelector(".event-li");
-        post_btn.addEventListener('click',(event).off('click')=>{
+        post_btn.addEventListener('click',(event)=>{
             console.log(event.target.parentNode.dataset.id);
         })
     }
