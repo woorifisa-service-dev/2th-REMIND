@@ -13,11 +13,11 @@ const toggleDarkmode = function (){
     if(checkbox.checked)
     {
         html.classList.add('dark');
-        document.querySelector('img').src = "./moon.png";
+        document.querySelector('img').src = "./img/moon.png";
     }
     else{
         html.classList.remove('dark');
-        document.querySelector('img').src = "./sun.png";
+        document.querySelector('img').src = "./img/sun.png";
     }
 }
 
