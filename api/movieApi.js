@@ -63,7 +63,7 @@ export const movieApi = {
           </div>
           <div class="rt-poster-detail-plus">
             <div class="rt-poster-detail-plus__star">
-              <i class="fa-solid fa-star fa-xs"></i> ${rating}/10
+              <i class="fa-solid fa-star fa-xs"></i> ${rating.toFixed(1)}/10
             </div>
             <div class="rt-poster-detail-plus__distribution">
               <p></p>
