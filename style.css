@@ -72,7 +72,6 @@ body {
 .poster {
   width: 200px;
   height: 300px;
-  background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_320.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
@@ -84,6 +83,7 @@ body {
   font-size: 18px;
   text-align: center;
   font-family: 'Noto Sans KR' ;
+  word-break: keep-all;
 }
 .card-container__comingsoon {
   height: 50%;

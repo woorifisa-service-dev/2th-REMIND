@@ -11,17 +11,24 @@ export const movieApi = {
     getMovies: async (path, position) => {
         let movies = [];
 
-        await fetch(`${BASE_URL}/movie/${path}?api_key=${API_KEY}&language=ko`)
+        await fetch(`${BASE_URL}/movie/${path}?api_key=${API_KEY}&language=ko&region=KR`)
             .then((res) => res.json())
             .then((data) => movies = data.results)
             .catch((err) => console.error('API 에러: ', err));
-
-        const createList = movies.slice(0, 3).map((movie) => {
-
+            
+        const a = Math.floor(Math.random() * 10);
+        const createList = movies.slice(a, a+3).map((movie) => {
+          function titlelimit(title){
+            if(title.length>12){
+              return title = title.substr(0,12) + '...';
+            } else{
+              return title;
+            }
+          }
             const imageUrl = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
             return `<li class="event-li hover:scale-[1.1] transition duration-500" data-id="${movie.id}">
                  <div class="poster shadow-[10px_1px_11px_-5px_rgba(0,0,0,0.3)]" style="background-image: url(${imageUrl});"></div>
-                 <h3 class="poster-title dark:text-white">${movie.title}</h3>
+                 <h3 class="poster-title dark:text-white">${titlelimit(movie.title)}</h3>
                 </li>`;
         });
         
@@ -46,7 +53,7 @@ export const movieApi = {
         let backBgPath;
         let posterBgPath;
 
-        await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=ko`)
+        await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=ko&region=KR`)
             .then((res) => res.json())
             .then(({ title, overview, vote_average, poster_path, backdrop_path }) => {
                 movieTitle = title;
@@ -70,27 +77,41 @@ export const movieApi = {
             return content
           }
         }
-        const template = `<div class="rt-poster-container">
-        <div class="rt-poster" style="background-image: url(${posterBgPath})"></div>
-        <div class="rt-poster-detail">
-          <div class="rt-poster-detail__title">
-            <p>${movieTitle}</p>
-          </div>
-          <div class="rt-poster-detail__description">
-            <p>
-             ${contentlimit(content)}
-            </p>
-          </div>
-          <div class="rt-poster-detail-plus">
-            <div class="rt-poster-detail-plus__star">
-              <i class="fa-solid fa-star fa-xs"></i> ${rating.toFixed(1)}/10
-            </div>
-            <div class="rt-poster-detail-plus__distribution">
-              <p></p>
+        function titlelimit(title){
+          if(title.length>12){
+            return title = title.substr(0,12) + '...';
+          } else{
+            return title;
+          }
+        }
+        const template = `<div class="container-rt-child" style="background-image: url(${backBgPath})">
+        <div class="container-rt-blur">
+          <div class="rt-poster-container">
+            <div class="rt-poster" style="background-image: url(${posterBgPath})"></div>
+            <div class="rt-poster-detail">
+              <div class="rt-poster-detail__title">
+                <p>${titlelimit(movieTitle)}</p>
+              </div>
+              <div class="rt-poster-detail__description">
+                <p>
+                  ${contentlimit(content)}
+                </p>
+              </div>
+              <div class="rt-poster-detail-plus">
+                <div class="rt-poster-detail-plus__star">
+                  <i class="fa-solid fa-star fa-xs"></i> ${rating.toFixed(1)}/10
+                </div>
+                <div class="rt-poster-detail-plus__distribution">
+                  <p></p>
+                  Neflix
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>`;
+      </div>
+`;
         document.querySelector('.container-rt').innerHTML = template;
     }
 };
+
