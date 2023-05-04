@@ -36,7 +36,7 @@ export const movieApi = {
         });
     },
     /** function getDetail
-     * 카드를 클릭했을 때 우측 화면에 detail 값들을 렌더린 해주는 함수
+     * 카드를 클릭했을 때 우측 화면에 detail 값들을 렌더링 해주는 함수
      * @param {*} movieId 내재되어있던 ID 값
      */
     getDetail: async (movieId) => {
