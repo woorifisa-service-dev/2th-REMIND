@@ -103,7 +103,6 @@ export const movieApi = {
                 </div>
                 <div class="rt-poster-detail-plus__distribution">
                   <p></p>
-                  Neflix
                 </div>
               </div>
             </div>
