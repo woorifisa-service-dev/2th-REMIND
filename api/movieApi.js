@@ -3,6 +3,11 @@ const BASE_URL = "https://api.themoviedb.org/3";
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w200/';
 
 export const movieApi = {
+  /** @function getMovies
+   * 왼쪽 화면에 카드 이미지와 제목을 불러와 렌더링하는 함수
+   * @param {path} path 받아오고자 하는 영화의 종류
+   * @param {position} position 카드리리스트 배열의 위치
+   */
     getMovies: async (path, position) => {
         let movies = [];
 
@@ -30,6 +35,10 @@ export const movieApi = {
             movieApi.getDetail(event.target.parentNode.dataset.id);
         });
     },
+    /** function getDetail
+     * 카드를 클릭했을 때 우측 화면에 detail 값들을 렌더링 해주는 함수
+     * @param {*} movieId 내재되어있던 ID 값
+     */
     getDetail: async (movieId) => {
         let movieTitle;
         let content;
@@ -50,6 +59,10 @@ export const movieApi = {
 
         // 배경 이미지 html 설계 오류 - 수정 필요
         // <div class="rt-poster-container" style="background-image: url(${backBgPath})"></div>
+        /** function contentlimit
+         * @param {*} content 길이를 제한하고자 하는 string 
+         * @returns {string} 90자 이하의 string
+         */
         function contentlimit(content){
           if(content.length>90){
             return content = content.substr(0,90) + '...';
