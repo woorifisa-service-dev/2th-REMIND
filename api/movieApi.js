@@ -14,12 +14,12 @@ export const movieApi = {
         const createList = movies.slice(0, 3).map((movie) => {
 
             const imageUrl = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
-            return `<li class="event-li hover:scale-[1.15] transition duration-700" data-id="${movie.id}">
-                 <div class="poster" style="background-image: url(${imageUrl});"></div>
+            return `<li class="event-li hover:scale-[1.1] transition duration-500" data-id="${movie.id}">
+                 <div class="poster shadow-[10px_1px_11px_-5px_rgba(0,0,0,0.3)]" style="background-image: url(${imageUrl});"></div>
                  <h3 class="poster-title dark:text-white">${movie.title}</h3>
                 </li>`;
         });
-
+        
         document.querySelectorAll('.card-list')[position].innerHTML = createList;
 
         document.querySelectorAll('.card-list')[0].addEventListener('click', (event) => {

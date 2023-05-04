@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>noonoo</title>
-    <!--테일윈드 다크모드 적용-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="./js/darkmode.js"></script>
-    <script>
-        
-        tailwind.config = {
-            content: [
-                "./public/index.html",
-            ],
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        nanum: ['Nanum Gothic']
-                    }
-                }
-            }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>noonoo</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
+
+  <!--테일윈드 다크모드 적용-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="./js/darkmode.js"></script>
+  <script>
+    tailwind.config = {
+      content: [
+        "./public/index.html",
+      ],
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            nanum: ['Nanum Gothic']
+          }
         }
-
-    </script>
-    
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-
-    
-    <script defer type="module" src="./main.js"></script>
-  </head>
-  <body>
-    <div class="container" style="max-width: 100%;">
-      <div class="container-lt">
-        <article class="flex flex-col min-h-screen dark:bg-[#282C34]">
+      }
+    }
+  </script>
+  <script defer type="module" src="./main.js"></script>
+</head>
+<body>
+  <div class="container" style="max-width: 100%;">
+    <div class="container-lt">
+      <article class="flex flex-col min-h-screen dark:bg-[#282C34]">
         <div class="header dark:border-b-[#282C34]">
           <div class="div-lt"></div>
           <div class="logo dark:text-[#ff6347]">noonoo</div>
           <div class="div-lt">
-             <!--다크모드-->
-          <div class="flex">
-            <div>
+            <!--다크모드-->
+            <div class="flex">
+              <div>
                 <div>
-                    <div class="change_direction">
-                        <input type="checkbox" id="checkbox" class="hidden" />
-                        <label for="checkbox" class="cursor-pointer">
-                           
-                                <img class="change_d_l" src="./img/sun.png" alt="다크모드 적용">
-                                <i></i>
-                           
-                        </label>
-                    </div>
+                  <div class="change_direction">
+                    <input type="checkbox" id="checkbox" class="hidden" />
+                    <label for="checkbox" class="cursor-pointer">
+                      <img class="change_d_l" src="./img/sun.png" alt="다크모드 적용">
+                      <i></i>
+                    </label>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
-
-         
-        </div>
-
-        
-
-
-
         </div>
         <div class="main">
           <div class="card-container">
@@ -81,7 +66,7 @@
               <ul class="card-list">
                 <li>
                   <div class="poster"></div>
-                  <h3 class="poster-title dark:text-white" >짱구는 못말려 극장판</h3>
+                  <h3 class="poster-title dark:text-white">짱구는 못말려 극장판</h3>
                 </li>
                 <li>
                   <div class="poster"></div>
@@ -112,34 +97,39 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container-rt">
-        <div class="rt-poster-container">
-          <div class="rt-poster"></div>
-          <div class="rt-poster-detail">
-            <div class="rt-poster-detail__title">
-              <p>가디언즈오브갤럭시</p>
-            </div>
-            <div class="rt-poster-detail__description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur,,Lorem ipsum dolor sit
-                amet consectetur,Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Qui, beatae?
-              </p>
-            </div>
-            <div class="rt-poster-detail-plus">
-              <div class="rt-poster-detail-plus__star">
-                <i class="fa-solid fa-star fa-xs"></i> 5/10
+    </div>
+    <div class="container-rt">
+      <!-- 자식 요소 안에 자식을 하나 더 둬서 블러처리함 -->
+      <div class="container-rt-child">
+        <div class="container-rt-blur">
+          <div class="rt-poster-container">
+            <div class="rt-poster"></div>
+            <div class="rt-poster-detail">
+              <div class="rt-poster-detail__title">
+                <p>가디언즈오브갤럭시</p>
               </div>
-              <div class="rt-poster-detail-plus__distribution">
-                <p></p>
-                Neflix
+              <div class="rt-poster-detail__description">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur,,Lorem ipsum dolor sit
+                  amet consectetur,Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Qui, beatae?
+                </p>
+              </div>
+              <div class="rt-poster-detail-plus">
+                <div class="rt-poster-detail-plus__star">
+                  <i class="fa-solid fa-star fa-xs"></i> 5/10
+                </div>
+                <div class="rt-poster-detail-plus__distribution">
+                  <p></p>
+                  Neflix
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </article>
     </div>
-  </body>
+    </article>
+  </div>
+</body>
 </html>
